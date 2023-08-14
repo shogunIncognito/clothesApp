@@ -1,0 +1,170 @@
+[
+  {
+    "id": 5,
+    "nombre": "Printed Blouse",
+    "descripcion": "Blusa estampada de seda",
+    "precio": 34.99,
+    "imagen": "https://www.anayibe.com/cdn/shop/products/DCS_5613_2048x2048.jpg?v=1678943308",
+    "categoria": "Blusas"
+  },
+  {
+    "id": 6,
+    "nombre": "Classic Trench Coat",
+    "descripcion": "Gabardina clásica con cinturón",
+    "precio": 79.99,
+    "imagen": "https://d1fufvy4xao6k9.cloudfront.net/feed/img/man_trenchcoat/868659/front.png",
+    "categoria": "Abrigos"
+  },
+  {
+    "id": 7,
+    "nombre": "Denim Jacket",
+    "descripcion": "Chaqueta de mezclilla con detalles desgastados",
+    "precio": 49.99,
+    "imagen": "https://cdn-images.farfetch-contents.com/16/65/33/63/16653363_32996386_600.jpg",
+    "categoria": "Chaquetas"
+  },
+  {
+    "id": 8,
+    "nombre": "Floral Maxi Dress",
+    "descripcion": "Vestido maxi floral de gasa",
+    "precio": 54.99,
+    "imagen": "https://i.ebayimg.com/thumbs/images/g/wUQAAOSwI8Rk0XCP/s-l640.jpg",
+    "categoria": "Vestidos"
+  },
+  {
+    "id": 9,
+    "nombre": "Slim Fit Chinos",
+    "descripcion": "Chinos de corte ajustado en colores variados",
+    "precio": 29.99,
+    "imagen": "https://www.gap.es/cdnassets/images/472760003_l.jpg",
+    "categoria": "Pantalones"
+  },
+  {
+    "id": 10,
+    "nombre": "Leather Biker Jacket",
+    "descripcion": "Chaqueta de motociclista de cuero genuino",
+    "precio": 109.99,
+    "imagen": "https://m.media-amazon.com/images/I/51HRwtm8KRL._AC_UF894,1000_QL80_.jpg",
+    "categoria": "Chaquetas"
+  },
+  {
+    "id": 11,
+    "nombre": "Lace Cocktail Dress",
+    "descripcion": "Vestido de cóctel de encaje elegante",
+    "precio": 64.99,
+    "imagen": "https://i.ebayimg.com/thumbs/images/g/wUQAAOSwI8Rk0XCP/s-l640.jpg",
+    "categoria": "Vestidos"
+  },
+  {
+    "id": 12,
+    "nombre": "Cotton Polo Shirt",
+    "descripcion": "Camiseta polo de algodón en colores variados",
+    "precio": 24.99,
+    "imagen": "https://lorens.com.co/wp-content/uploads/2020/11/1153-500x649.jpg",
+    "categoria": "Camisetas"
+  },
+  {
+    "id": 13,
+    "nombre": "Striped Sweater",
+    "descripcion": "Suéter a rayas de punto suave",
+    "precio": 39.99,
+    "imagen": "https://m.media-amazon.com/images/I/61F7r1Ek0fL._AC_UF894,1000_QL80_.jpg",
+    "categoria": "Suéteres"
+  },
+  {
+    "id": 14,
+    "nombre": "High-Waisted Shorts",
+    "descripcion": "Shorts de talle alto con diseño moderno",
+    "precio": 27.99,
+    "imagen": "https://www.gap.es/cdnassets/images/472760003_l.jpg",
+    "categoria": "Shorts"
+  },
+  {
+    "id": 15,
+    "nombre": "Suede Ankle Boots",
+    "descripcion": "Botines de ante con tacón y cierre lateral",
+    "precio": 59.99,
+    "imagen": "https://m.media-amazon.com/images/I/51bI84DiafL._AC_UY1000_.jpg",
+    "categoria": "Calzado"
+  },
+  {
+    "id": 16,
+    "nombre": "Pleated Midi Skirt",
+    "descripcion": "Falda midi plisada en colores vibrantes",
+    "precio": 32.99,
+    "imagen": "https://phantom-telva.unidadeditorial.es/0aad742842ded75a0f467cc804dda971/crop/273x344/2011x1320/resize/1200/f/webp/assets/multimedia/imagenes/2021/04/13/16183450647774.jpg",
+    "categoria": "Faldas"
+  },
+  {
+    "id": 17,
+    "nombre": "Printed Scarf",
+    "descripcion": "Pañuelo estampado de seda",
+    "precio": 18.99,
+    "imagen": "https://d2r9epyceweg5n.cloudfront.net/stores/136/365/products/p9195_33_gr_7421-e82ba2eaab53f7ba7014958308692048-1024-1024.jpg",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 18,
+    "nombre": "Crewneck Sweatshirt",
+    "descripcion": "Sudadera de cuello redondo en colores variados",
+    "precio": 28.99,
+    "imagen": "https://www.gap.es/cdnassets/images/472760003_l.jpg",
+    "categoria": "Sudaderas"
+  },
+  {
+    "id": 19,
+    "nombre": "Tailored Blazer",
+    "descripcion": "Blazer entallado de estilo clásico",
+    "precio": 74.99,
+    "imagen": "https://m.media-amazon.com/images/I/61NRy5Bf4YL._AC_SX679_.jpg",
+    "categoria": "Chaquetas"
+  },
+  {
+    "id": 20,
+    "nombre": "Knit Beanie",
+    "descripcion": "Gorro tejido de punto en varios colores",
+    "precio": 14.99,
+    "imagen": "https://www.artesanum.com/content/upi/5/17895/4/45c35b40aaa61557.jpg",
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 21,
+    "nombre": "Pleated Trousers",
+    "descripcion": "Pantalones plisados de corte elegante",
+    "precio": 44.99,
+    "imagen": "https://www.gap.es/cdnassets/images/472760003_l.jpg",
+    "categoria": "Pantalones"
+  },
+  {
+    "id": 22,
+    "nombre": "Satin Slip Dress",
+    "descripcion": "Vestido de satén estilo slip con tirantes",
+    "precio": 49.99,
+    "imagen": "https://i.ebayimg.com/thumbs/images/g/wUQAAOSwI8Rk0XCP/s-l640.jpg",
+    "categoria": "Vestidos"
+  },
+  {
+    "id": 23,
+    "nombre": "Cotton Button-Up Shirt",
+    "descripcion": "Camisa de botones de algodón en colores variados",
+    "precio": 36.99,
+    "imagen": "https://d2r9epyceweg5n.cloudfront.net/stores/136/365/products/p9195_33_gr_7421-e82ba2eaab53f7ba7014958308692048-1024-1024.jpg",
+    "categoria": "Camisas"
+  },
+  {
+    "id": 24,
+    "nombre": "Puffer Jacket",
+    "descripcion": "Chaqueta acolchada con capucha",
+    "precio": 69.99,
+    "imagen": "https://m.media-amazon.com/images/I/51HRwtm8KRL._AC_UF894,1000_QL80_.jpg",
+    "categoria": "Chaquetas"
+  },
+  {
+    "id": 25,
+    "nombre": "Ruffled Blouse",
+    "descripcion": "Blusa con volantes en los puños y cuello",
+    "precio": 29.99,
+    "imagen": "https://static1.mujerhoy.com/www/multimedia/202305/03/media/cortadas/blusa-volantes-tendencia-kYGD-U2002077686443yD-1248x1248@MujerHoy.jpg",
+    "categoria": "Blusas"
+  }
+]
