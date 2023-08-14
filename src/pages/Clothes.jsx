@@ -7,12 +7,27 @@ import { toast } from 'react-hot-toast'
 
 export default function Clothes () {
   const [selected, setSelected] = useState(null)
-  const { addItem } = useShopCarStore()
+  const { items, addItem } = useShopCarStore()
 
   const handleSelect = clothe => setSelected(clothe)
   const handleAddToCar = clothe => {
+    const item = items.find(item => item.id === clothe.id)
+
+    if (!item) {
+      addItem([...items, { ...clothe, cantidad: 1 }])
+      toast.success('Producto agregado al carrito')
+      return
+    }
+
+    const newItems = items.map(item => {
+      if (item.id === clothe.id) {
+        return { ...item, cantidad: item.cantidad + 1 }
+      }
+      return item
+    })
+
+    addItem(newItems)
     toast.success('Producto agregado al carrito')
-    addItem(clothe)
   }
 
   return (

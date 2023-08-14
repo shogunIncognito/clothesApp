@@ -10,7 +10,7 @@ import { MdDelete } from 'react-icons/md'
 export default function NavBar () {
   const [open, setOpen] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
-  const { items } = useShopCarStore()
+  const { items, addItem } = useShopCarStore()
   const navigate = useNavigate()
   const path = useLocation().pathname
   const nav = useRef(null)
@@ -23,6 +23,11 @@ export default function NavBar () {
       setIsClosing(false)
       setOpen(false)
     }, 600)
+  }
+
+  const handleDelete = (id) => {
+    const newItems = items.filter(item => item.id !== id)
+    addItem(newItems)
   }
 
   useEffect(() => {
@@ -58,7 +63,7 @@ export default function NavBar () {
             <AiFillGithub size='2.2em' />
           </a>
         </div>
-        <button onClick={handleOpen} class='absolute end-0 mr-5 bg-gray-100 p-2 rounded-full transition-all duration-300 hover:bg-gray-300'>
+        <button onClick={handleOpen} className='absolute end-0 mr-5 bg-gray-100 p-2 rounded-full transition-all duration-300 hover:bg-gray-300'>
           <small className='absolute right-0 font-bold top-0'>{items.length}</small>
           <BiSolidCart size='2.2rem' />
         </button>
@@ -73,14 +78,15 @@ export default function NavBar () {
             </button>
             {
             items.map(item => (
-              <div className='flex items-center w-full justify-around p-2 gap-5' key={item.id}>
+              <div className='flex mt-3 items-center border-2 shadow-lg w-full justify-around p-2 gap-5' key={item.id}>
+                <h2 className='mx-2'>{item.cantidad}</h2>
                 <div className='max-w-[40%] flex-1'>
                   <img className='rounded-full' width='70px' src={item.imagen} alt={item.nombre} />
                 </div>
                 <h2 className='flex-1'>{item.nombre}</h2>
                 <p className='flex-1'>$ {item.precio}</p>
-                <button className='flex-1'>
-                  <MdDelete className='hover:text-red-600 ml-5' size='1.3rem' />
+                <button onClick={() => handleDelete(item.id)} className='flex-1'>
+                  <MdDelete className='hover:text-red-600 ml-5' size='1.5rem' />
                 </button>
               </div>
             ))
