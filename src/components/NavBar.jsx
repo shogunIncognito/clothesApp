@@ -10,13 +10,12 @@ import { MdDelete } from 'react-icons/md'
 export default function NavBar () {
   const [open, setOpen] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
-  const { items, addItem } = useShopCarStore()
+  const { items, addItem, moneyToPay, addMoneyToPay } = useShopCarStore()
   const navigate = useNavigate()
   const path = useLocation().pathname
   const nav = useRef(null)
 
   const handleOpen = () => setOpen(true)
-
   const handleClose = () => {
     setIsClosing(true)
     setTimeout(() => {
@@ -25,8 +24,9 @@ export default function NavBar () {
     }, 600)
   }
 
-  const handleDelete = (id) => {
-    const newItems = items.filter(item => item.id !== id)
+  const handleDelete = (itemToDel) => {
+    const newItems = items.filter(item => item.id !== itemToDel.id)
+    addMoneyToPay(itemToDel.precio * -1)
     addItem(newItems)
   }
 
@@ -70,27 +70,36 @@ export default function NavBar () {
 
       </nav>
 
-      {open && (
-        <section className='z-50 w-screen top-0 h-screen fixed modal'>
-          <div className={`bg-slate-100 fixed w-[20%] animate__animated animate__rotateInDownRight ${isClosing && 'animate__rotateOutDownRight'} overflow-auto shadow-2xl h-screen end-0 top-0`}>
+      {open && path !== '/pay' && (
+        <section className='z-50 w-screen top-0 fixed modal'>
+          <div className={`bg-slate-100 fixed w-[20%] flex flex-col animate__animated animate__rotateInDownRight ${isClosing && 'animate__rotateOutDownRight'} shadow-2xl h-screen end-0 top-0`}>
             <button onClick={handleClose} className='w-full p-5 bg-slate-200 hover:bg-slate-300 transition-colors'>
               X
             </button>
-            {
-            items.map(item => (
-              <div className='flex mt-3 items-center border-2 shadow-lg w-full justify-around p-2 gap-5' key={item.id}>
-                <h2 className='mx-2'>{item.cantidad}</h2>
-                <div className='max-w-[40%] flex-1'>
-                  <img className='rounded-full' width='70px' src={item.imagen} alt={item.nombre} />
-                </div>
-                <h2 className='flex-1'>{item.nombre}</h2>
-                <p className='flex-1'>$ {item.precio}</p>
-                <button onClick={() => handleDelete(item.id)} className='flex-1'>
-                  <MdDelete className='hover:text-red-600 ml-5' size='1.5rem' />
-                </button>
+            <div className='overflow-hidden'>
+              {
+                items.map(item => (
+                  <div className='flex mt-3 animate__animated animate__fadeInRight items-center border-2 shadow-lg w-full justify-around p-2 gap-5' key={item.id}>
+                    <h2 className='mx-2'>{item.cantidad}</h2>
+                    <div className='max-w-[40%] flex-1'>
+                      <img className='rounded-full' width='70px' src={item.imagen} alt={item.nombre} />
+                    </div>
+                    <h2 className='flex-1'>{item.nombre}</h2>
+                    <p className='flex-1'>$ {item.precio}</p>
+                    <button onClick={() => handleDelete(item)} className='flex-1'>
+                      <MdDelete className='hover:text-red-600 ml-5' size='1.5rem' />
+                    </button>
+                  </div>
+                ))
+              }
+            </div>
+            <div className='w-full absolute bottom-0 border-t-2 border-blue-400 flex-col text-center gap-3 flex justify-center p-5 bg-slate-200 transition-colors'>
+              <div className='flex gap-4 items-center'>
+                <p>Total to pay</p>
+                <h2 className='text-lg'>$ {moneyToPay}</h2>
               </div>
-            ))
-          }
+              <button onClick={() => items.length > 0 && navigate('/pay')} className='px-5 py-2 hover:bg-blue-700 bg-blue-600 rounded-md text-white'>Pagar</button>
+            </div>
           </div>
         </section>
       )}

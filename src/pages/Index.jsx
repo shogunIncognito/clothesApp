@@ -14,12 +14,13 @@ export default function Index () {
           <button className='border-2 mt-3 py-3 px-8 hover:px-10 rounded-md transition-all duration-300 hover:text-black hover:bg-white'>Explora</button>
         </div>
       </header>
-      <section className='p-10 flex flex-col'>
+      <section className='p-10 flex flex-col w-full justify-center items-center'>
         <h2 className='text-4xl font-bold text-center'>Tu Eleccion</h2>
-        <div className='grid grid-template mx-40 my-10'>
-          <Card img={card1img} />
-          <Card img={card2img} />
-          <Card img={card3img} />
+        <div className='mx-40 my-8 flex justify-around'>
+          <Card className='flex-1' img={card1img} />
+          <Card className='flex-1' img={card2img} />
+          <Card className='flex-1' img={card3img} />
+
         </div>
       </section>
 

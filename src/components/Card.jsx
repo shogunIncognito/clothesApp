@@ -1,6 +1,6 @@
-export default function Card ({ text, img, title }) {
+export default function Card ({ img, ...props }) {
   return (
-    <div className='max-w-md mx-5 bg-slate-100 transition-all border-2 duration-300 ease-in-out shadow-md hover:shadow-xl rounded-md'>
+    <div {...props} className='max-w-md mx-5 bg-slate-100 transition-all border-2 duration-300 ease-in-out shadow-md hover:shadow-xl rounded-md'>
       <div className='w-full overflow-hidden max-h-[420px]'>
         <img className='rounded-md hover:scale-[1.1] duration-300 transition-transform' src={img} alt='cardimg' />
       </div>
