@@ -16,6 +16,7 @@
   url('./assets/heroimg.jpgs');
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .scrolled {
@@ -36,6 +37,7 @@
   ),
   url('./assets/heroimg2.jpeg');
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
