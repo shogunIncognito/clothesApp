@@ -1,11 +1,12 @@
+import Button from '../components/Button'
 import { useShopCarStore } from '../store/shopCarStore'
 
 export default function PayClothes () {
   const { items, moneyToPay } = useShopCarStore()
 
   return (
-    <div className='w-full h-screen flex'>
-      <section className='flex-1 flex flex-col ml-52 mt-20 mx-20'>
+    <div className='w-full h-screen flex flex-col lg:flex-row'>
+      <section className='flex-1 flex flex-col mx-10 mt-20 lg:ml-52 lg:mt-20 lg:mx-20'>
         <h2 className='text-2xl mb-2'>Detalles de pago</h2>
         <p><b>Información</b> - Envió - Pago</p>
         <div className='flex flex-col my-5 gap-1'>
@@ -24,13 +25,13 @@ export default function PayClothes () {
             <option value=''>Ecuador</option>
             <option value=''>Peru</option>
           </select>
-          <div className='flex gap-1'>
+          <div className='flex gap-1 flex-col lg:flex-row'>
             <input className='px-4 flex-1 py-2 bg-slate-200 rounded-md' type='text' placeholder='Nombre' />
             <input className='px-4 flex-1 py-2 bg-slate-200 rounded-md' type='text' placeholder='Apellido' />
           </div>
           <input className='px-4 py-2 bg-slate-200 rounded-md' type='text' placeholder='Dirección' />
           <input className='px-4 py-2 bg-slate-200 rounded-md' type='text' placeholder='Apartamento, habitación, etc. (opcional)' />
-          <div className='flex gap-2'>
+          <div className='flex gap-2 flex-col lg:flex-row'>
             <input className='flex-1 px-4 py-2 bg-slate-200 rounded-md' type='text' placeholder='Ciudad' />
             <input className='flex-1 px-4 py-2 bg-slate-200 rounded-md' type='text' placeholder='Departamento' />
             <input className='flex-1 px-4 py-2 bg-slate-200 rounded-md' type='text' placeholder='Código postal' />
@@ -40,9 +41,9 @@ export default function PayClothes () {
             <label>Guardar información para la proxima vez</label>
           </div>
         </div>
-        <button className='px-4 py-3 bg-blue-800 text-white self-end mt-5 rounded-md'>Continuar</button>
+        <Button className='px-4 py-3 self-end mt-5'>Continuar</Button>
       </section>
-      <section className='flex-1 bg-slate-300'>
+      <section className='flex-1 bg-slate-300 hidden lg:block'>
         {/* Se recorre los items */}
         <div className='w-[40%] flex flex-col ml-14 gap-2 my-20'>
           {

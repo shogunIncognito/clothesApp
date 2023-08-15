@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import Logo from './Logo'
 import { useShopCarStore } from '../store/shopCarStore'
 import { MdDelete } from 'react-icons/md'
+import Button from './Button'
 
 export default function NavBar () {
   const [open, setOpen] = useState(false)
@@ -53,13 +54,13 @@ export default function NavBar () {
       <nav ref={nav} className='w-full top-0 z-20 bg-slate-50 duration-200 ease-in-out items-center transition-all p-5 gap-8 flex bg-transparent'>
         <Logo width='80px' className='absolute' />
         <div className='flex w-full justify-center m-auto animate__animated animate__fadeInDown'>
-          <button onClick={() => navigate('/clothes')} className={`${path === '/clothes' && 'bg-slate-800 text-white'} hover:bg-slate-800 hover:text-white transition-all py-2 px-5 border-2 border-opacity-5 rounded border-black`}>
+          <button onClick={() => navigate('/clothes')} className={`${path === '/clothes' && 'bg-slate-800 text-white'} hover:bg-slate-800 hover:text-white transition-all py-2 px-2 lg:px-5 border-2 border-opacity-5 rounded border-black`}>
             <FaTshirt size='2.2em' />
           </button>
-          <button onClick={() => navigate('/')} className={`${path === '/' && 'bg-slate-800 text-white'} hover:bg-slate-800 hover:text-white transition-all py-2 px-5 border-2 border-opacity-5 rounded border-black`}>
+          <button onClick={() => navigate('/')} className={`${path === '/' && 'bg-slate-800 text-white'} hover:bg-slate-800 hover:text-white transition-all py-2 px-2 lg:px-5 border-2 border-opacity-5 rounded border-black`}>
             <AiFillHome size='2.2em' />
           </button>
-          <a href='https://github.com/shogunIncognito' className='hover:bg-slate-800 hover:text-white transition-all py-2 px-5 border-2 border-opacity-5 rounded border-black'>
+          <a href='https://github.com/shogunIncognito' className='hover:bg-slate-800 hover:text-white transition-all py-2 px-2 lg:px-5 border-2 border-opacity-5 rounded border-black'>
             <AiFillGithub size='2.2em' />
           </a>
         </div>
@@ -72,7 +73,7 @@ export default function NavBar () {
 
       {open && path !== '/pay' && (
         <section className='z-50 w-screen top-0 fixed modal'>
-          <div className={`bg-slate-100 fixed w-[20%] flex flex-col animate__animated animate__rotateInDownRight ${isClosing && 'animate__rotateOutDownRight'} shadow-2xl h-screen end-0 top-0`}>
+          <div className={`bg-slate-100 fixed w-full lg:w-[20%] flex flex-col animate__animated animate__rotateInDownRight ${isClosing && 'animate__rotateOutDownRight'} shadow-2xl h-screen end-0 top-0`}>
             <button onClick={handleClose} className='w-full p-5 bg-slate-200 hover:bg-slate-300 transition-colors'>
               X
             </button>
@@ -98,7 +99,7 @@ export default function NavBar () {
                 <p>Total to pay</p>
                 <h2 className='text-lg'>$ {moneyToPay}</h2>
               </div>
-              <button onClick={() => items.length > 0 && navigate('/pay')} className='px-5 py-2 hover:bg-blue-700 bg-blue-600 rounded-md text-white'>Pagar</button>
+              <Button onClick={() => items.length > 0 && navigate('/pay')}>Pagar</Button>
             </div>
           </div>
         </section>
